@@ -1,56 +1,71 @@
 # AI Governance Plugins
 
-A Claude Code plugin marketplace for AI governance and multi-agent decision-making tools.
+A Claude Code plugin marketplace for structured, multi-agent decision-making.
 
-## Available Plugins
+## Board of Directors
 
-### Board of Directors
+Your project gets a board room. Specialized AI agents sit around the table as directors — each with deep domain expertise in technology, finance, product, legal, or growth. They deliberate on your decisions with evidence-based arguments, debate disagreements, vote on motions, and record everything as institutional memory.
 
-A circular AI governance system where specialized AI agents serve as board members, deliberating and voting on project decisions. You serve as CEO/Chairman with veto power.
+You are the CEO and Chairman. You set the agenda, hear the arguments, and have final say. The board works for you.
 
-**Features:**
-- 6 director agents (CTO, CFO, CPO, CLO, CMO, Secretary) with equal voting weight
-- 6 specialist advisers (Security, Performance, UX, DevOps, Data, AI Ethics)
-- Full meeting lifecycle with parallel deliberation, cross-examination, and formal voting
-- Persistent board memory with decision history and institutional knowledge
-- 4 board composition templates (Default, Startup, Web App, API Service)
-- Chairman veto power with recorded rationale
+### How it works
 
-**Commands:** `/board-setup`, `/board-meeting`, `/board-decide`, `/board-vote`, `/board-status`, `/board-review`, `/board-minutes`
+```
+/board-setup                                    # Analyze your project and compose your board
+/board-meeting Should we migrate to TypeScript?  # Full deliberation with all directors
+/board-decide Which database for the new service? # Quick decision with relevant directors
+```
+
+A meeting runs through four phases:
+
+1. **Convene** — Directors receive the agenda, load project context and past decisions
+2. **Deliberate** — Each director presents their position with evidence (in parallel), then rebuts disagreements
+3. **Vote** — FOR / AGAINST / ABSTAIN with rationale, tallied by the Secretary
+4. **Record** — Chairman approves or vetoes, minutes are saved with full rationale and dissenting opinions
+
+### The board
+
+| Director | Domain | Lens |
+|----------|--------|------|
+| CTO | Architecture, scalability, code quality | Technical feasibility and engineering excellence |
+| CFO | Costs, ROI, resource allocation | Financial impact and sustainability |
+| CPO | User experience, product strategy | User value and product-market fit |
+| CLO | Legal, compliance, licensing, privacy | Risk, regulation, and liability |
+| CMO | Growth, adoption, developer experience | Market positioning and reach |
+| Secretary | Minutes, persistence, action items | Procedural integrity (non-voting) |
+
+Six specialist advisers (Security, Performance, UX, DevOps, Data, AI Ethics) can be called into any meeting when the board needs deeper expertise.
+
+### Key features
+
+- **Circular organization** — all directors have equal voting weight, no hierarchy
+- **Parallel deliberation** — directors form positions simultaneously for fast meetings
+- **Persistent memory** — decisions, rationale, and dissenting opinions recorded as JSON in `.claude/board/`
+- **Project-aware setup** — detects your stack and recommends the right board composition
+- **Chairman veto** — you approve, veto, defer, or amend any decision
+- **4 templates** — Default, Startup, Web App, API Service
+
+### All commands
+
+| Command | What it does |
+|---------|-------------|
+| `/board-setup` | Initialize your board with project-aware composition |
+| `/board-meeting <topic>` | Full board meeting with deliberation and voting |
+| `/board-decide <question>` | Quick decision with 2-3 relevant directors |
+| `/board-vote <motion>` | Formal vote on a specific motion |
+| `/board-status` | Board dashboard with recent activity |
+| `/board-review` | Multi-perspective code review |
+| `/board-minutes` | Browse past meeting records |
 
 ## Installation
 
-### Add this marketplace
+Add this marketplace in Claude Code:
 
 ```
-/install-plugin marketplace ai-governance-plugins
+/plugin
 ```
 
-Or add this repository URL as a marketplace source in Claude Code.
-
-### Install a plugin
-
-```
-/install-plugin ai-governance-plugins/board-of-directors
-```
-
-### Quick start
-
-After installing the Board of Directors plugin:
-
-```
-/board-setup           # Initialize your board
-/board-meeting <topic> # Convene a meeting
-/board-decide <question> # Quick decision
-```
-
-## Contributing
-
-This marketplace is open to AI governance-related plugins. To submit a plugin:
-
-1. Create your plugin as a GitHub repository with a `.claude-plugin/plugin.json`
-2. Open an issue on this repo with the plugin URL and description
-3. We'll review and add it to the marketplace
+Then enter `GeoNicol/ai-governance-plugins` as the marketplace source and install the Board of Directors plugin.
 
 ## License
 
