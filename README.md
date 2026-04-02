@@ -59,13 +59,40 @@ Six specialist advisers (Security, Performance, UX, DevOps, Data, AI Ethics) can
 
 ## Installation
 
-Add this marketplace in Claude Code:
+### From the CLI
+
+```bash
+claude plugin add GeoNicol/ai-governance-plugins
+```
+
+This registers the marketplace. Then install the plugin:
+
+```bash
+claude plugin install board-of-directors
+```
+
+### From the Claude Code app
+
+1. Type `/plugin` in the chat
+2. Select **Add Marketplace**
+3. Enter `GeoNicol/ai-governance-plugins`
+4. Browse the marketplace and install **Board of Directors**
+
+### From source
+
+Clone the plugin repo directly into your project:
+
+```bash
+claude plugin add GeoNicol/BoardOfDirectors
+```
+
+### After installation
 
 ```
-/plugin
+/board-setup    # Run this first to initialize your board
 ```
 
-Then enter `GeoNicol/ai-governance-plugins` as the marketplace source and install the Board of Directors plugin.
+The setup wizard analyzes your project, recommends a board composition, and creates the `.claude/board/` directory for persistent state.
 
 ## License
 
