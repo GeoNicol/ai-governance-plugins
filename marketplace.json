@@ -1,0 +1,42 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "ai-governance-plugins",
+  "description": "AI governance and multi-agent decision-making plugins for Claude Code",
+  "owner": {
+    "name": "Geo Nicolaidis",
+    "email": "geonicolaidis@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "board-of-directors",
+      "description": "Circular AI governance system where specialized AI agents serve as board members, deliberating and voting on project decisions. User is CEO/Chairman with veto power.",
+      "category": "agents",
+      "source": {
+        "source": "github",
+        "repo": "GeoNicol/BoardOfDirectors",
+        "sha": "484ba1be9dfeaef1ab50b166cbfa4a461d54af05"
+      },
+      "homepage": "https://github.com/GeoNicol/BoardOfDirectors#readme",
+      "author": {
+        "name": "Geo Nicolaidis"
+      },
+      "license": "MIT",
+      "keywords": [
+        "governance",
+        "board",
+        "agents",
+        "decision-making",
+        "multi-agent",
+        "deliberation",
+        "circular-organization",
+        "voting",
+        "directors"
+      ],
+      "tags": [
+        "governance",
+        "agents",
+        "multi-agent"
+      ]
+    }
+  ]
+}
